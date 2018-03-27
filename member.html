@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>member</title>
+<link rel="stylesheet" type="text/css" href="../css/member.css" />
+<script language="javascript"> 
+	function student_way(){
+		var y = document.getElementById("user_student").value;
+		var m = document.getElementById("msg");
+		if(y==""){
+			m.style.display="";
+		}else{
+			alert(1);
+			if(y!="aaa"){
+				alert(1);
+				m.style.display = "none";
+				
+				m.innerHtml="a";
+			}
+		}
+			
+		};
+		
+		
+		//if(y.validity.valueMissing){
+			//alert("不能为空");
+			//y.nextElementSibling.innerHtml="不能为空";
+			//y.nextElementSibling.className="msg_error";
+			//
+		//}
+	}
+	
+	function freah(){
+		foot.innerHTML="";
+	}
+    function doReset(){  
+    for(i=0;i<document.all.tags("input").length;i++){  
+        if(document.all.tags("input")[i].type=="text"){  
+            document.all.tags("input")[i].value="";  
+        }  
+    }  
+}  
+</script>
+</head>
+<body>
+</div>
+<div id="head">
+<div id="head1">查询或新增用户</div>
+<div id="head2">
+<div id="head2_left">
+					<p>学号：&nbsp&nbsp<input type="text" 
+					placeholder="请输入学号" onblur="student_way()" 
+					id="user_student" name="user_student">
+					<span id="msg" style="display:none; color: red;">不能为空</span></p>
+					<p>性别：&nbsp&nbsp<select >
+								<option >男</option>
+								<option >女</option>
+					</select></p>
+								
+					</div>
+<div id="head2_right">	
+					<p>姓名：&nbsp&nbsp
+					<input type="text" placeholder="请输入姓名">
+					</p>
+					<p>身份：&nbsp&nbsp<select>
+								<option>学生</option>
+								<option>老师</option>
+					</select></p>
+					
+</div>						
+				</div>
+				<div id="head3">
+						<input type="submit" value="查询" onclick="freah()">&nbsp&nbsp
+						<input type="submit" value="新增">&nbsp&nbsp
+						<input type="submit" value="重置" onClick="doReset()">
+				</div>
+				</div>	
+<div id="foot" >
+				<table>
+				<tr>
+				<th>序列</th>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>身份</th>
+				</tr>
+				<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>杨怡俊</td>
+				<td>男</td>
+				<td>学生</td>
+				</tr>
+				<tr>
+				<td>2</td>
+				<td>2</td>
+				<td>杨一银</td>
+				<td>男</td>
+				<td>老师</td>
+				</tr>
+				</table>		
+	</div>			
+</div>
+</body>
+</html>
